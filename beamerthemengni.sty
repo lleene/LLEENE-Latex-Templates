@@ -1,0 +1,57 @@
+% Modified Beamer Style sheet for NGNI publications
+% Last edited by: Lieuwe B. Leene 2017 August
+% Modified by Lieuwe Leene, June 2019
+
+\mode<presentation>
+
+\newif\ifbeamer@secheader
+\beamer@secheaderfalse
+\DeclareOptionBeamer{secheader}{\beamer@secheadertrue}
+\ProcessOptionsBeamer
+\useoutertheme{ngni}
+
+% color definitions
+\definecolor{ngniblue}{RGB}{34,57,106}
+\definecolor{ngnired}{RGB}{218,30,37}
+\definecolor{ngniwhite}{RGB}{240,240,255}
+\definecolor{ngniblack}{RGB}{0,0,30}
+
+% footer styling
+\setbeamerfont{footnote}{size=\scriptsize}
+\setbeamercolor{footnote}{fg=white,bg=ngniblue}
+
+% set the title color
+\setbeamercolor{title}{fg=ngniwhite}
+\setbeamerfont{title}{size=\LARGE}
+\setbeamercolor{author}{fg=ngniwhite}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamercolor{institute}{fg=ngniwhite}
+\setbeamerfont{institute}{size=\normalsize}
+
+% set colors for specific elements
+\setbeamercolor{block}{fg=ngniblack}
+\setbeamercolor{block title}{fg=ngniblack} % adjust title color to poppy
+\setbeamercolor{block item}{fg=ngniblack}
+\setbeamercolor{itemize item}{fg=ngniblack} % adjusts the bullet color
+
+% frame title styling
+\setbeamertemplate{frametitle}{\vspace{1.5em} \color{ngniblack} \insertframetitle}
+\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
+
+% frame content styling
+\setbeamersize{text margin left=1.5em,text margin right=3em}
+
+%define first bullet symbol
+\usesubitemizeitemtemplate{%
+    \tiny\raise1.5pt\hbox{\color{beamerstructure}$\circ$}%
+}
+
+%define second bullet symbol
+\usesubsubitemizeitemtemplate{%
+    \tiny\raise1.5pt\hbox{\color{beamerstructure}$\blacktriangleright$}%
+}
+
+\ifbeamer@secheader\else\setbeamertemplate{headline}[default]\fi
+
+\mode
+<all>

@@ -1,0 +1,106 @@
+% Modified Beamer Style sheet for NGNI publications
+% Last edited by: Lieuwe B. Leene 2017 August
+% Modified by Lieuwe Leene, June 2019
+
+\mode<presentation>
+
+%% This formats the title page
+\ifwideas %% this is a 16:9 paper format
+\setbeamercolor{basic}{bg=white,fg=white}
+\defbeamertemplate*{title page}{ngnitheme}{
+  \begin{beamercolorbox}[wd=\paperwidth, ht=\paperheight]{basic}
+  \setlength{\unitlength}{\paperwidth}%
+  \begin{picture}(1,1)%
+  %\put(0,0){\includegraphics[width=\paperwidth,clip=true,trim={0 0 0 3.5cm}]{Style/KM1801VM2_I.png}}
+  \put(0.04,0.25){%
+      \begin{minipage}{0.8\paperwidth}
+      \begin{flushleft}
+      \usebeamercolor[black]{title}
+      \usebeamerfont{title}\inserttitle\par
+      \usebeamerfont{subtitle}\insertsubtitle\par
+      \bigskip
+      \usebeamerfont{author}\insertauthor\par
+      \usebeamerfont{institute}\insertinstitute\par
+      \end{flushleft}
+      \end{minipage}
+  }
+  \put(0.03,0.465){\includegraphics[height=0.125\paperheight]{Style/IC_blue.pdf}}
+  \put(0.86,0.465){\includegraphics[height=0.15\paperheight]{Style/main_logo.pdf}}
+  \end{picture}
+  \end{beamercolorbox}
+  \vskip 0pt%
+}
+\else %% this is a 4:3 paper format
+\setbeamercolor{basic}{bg=white,fg=white}
+\defbeamertemplate*{title page}{ngnitheme}{
+  \begin{beamercolorbox}[wd=\paperwidth, ht=\paperheight]{basic}
+  \setlength{\unitlength}{\paperwidth}%
+  \begin{picture}(1,1)%
+  %\put(0,0){\includegraphics[width=\paperwidth]{Style/KM1801VM2_I.png}}
+  \put(0.04,0.3){%
+      \begin{minipage}{0.8\paperwidth}
+      \begin{flushleft}
+      \usebeamercolor[black]{title}
+      \usebeamerfont{title}\inserttitle\par
+      \usebeamerfont{subtitle}\insertsubtitle\par
+      \bigskip
+      \usebeamerfont{author}\insertauthor\par
+      \usebeamerfont{institute}\insertinstitute\par
+      \end{flushleft}
+      \end{minipage}
+  }
+  \put(0.03,0.61){\includegraphics[height=0.125\paperheight]{Style/IC_blue.pdf}}
+  \put(0.82,0.615){\includegraphics[height=0.15\paperheight]{Style/main_logo.pdf}}
+  \end{picture}
+  \end{beamercolorbox}
+  \vskip 0pt%
+}
+\fi
+
+
+%% This formats the the footer on every page
+\defbeamertemplate*{footline}{ngnitheme}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=5ex,dp=2.5ex]{footnote}%
+  \usebeamerfont{footnote}
+  \hspace{5mm} \today
+  \hfill
+  \insertsubtitle
+  \hfill
+  \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \inserttitlegraphic
+  \end{beamercolorbox}}%
+  \vskip 0pt%
+}
+
+\ifsectiontoc
+\AtBeginSection[]
+{
+\disablefooter
+\begin{frame}{Outline}
+	\tableofcontents[currentsection]
+\end{frame}
+\enablefooter{\inserttitle}
+}
+\fi
+
+\defbeamertemplate*{intermission}{ngnitheme}{
+	\begin{beamercolorbox}[wd=\paperwidth, ht=\paperheight]{basic}
+		\setlength{\unitlength}{\paperwidth}%
+		\begin{picture}(1,1)%
+		\put(0,0){\includegraphics[width=\paperwidth,clip=true,trim={0 0 0 0cm}]{Style/KM1801VM2_I.png}}
+		\put(0.04,0.2){%
+			\begin{minipage}{0.8\paperwidth}
+			\begin{centering}
+			TITLE NAME
+			\end{centering}
+			\end{minipage}
+		}
+		\end{picture}
+	\end{beamercolorbox}
+	\vskip 0pt%
+}
+
+\mode
+<all>
