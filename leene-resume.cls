@@ -28,9 +28,7 @@
 
 \providecommand{\fontscale}{1} % load default if not set
 \setmainfont
-% [Path = /home/lbl11/Latex/Fonts/IBM-Plex-Sans/,
-% [Path = ../Latex/Fonts/IBM-Plex-Sans/,
- [Path = ../../Latex/Fonts/IBM-Plex-Sans/,
+ [Path = ../Fonts/IBM-Plex-Sans/,
    Scale=\fontscale,
    UprightFont = *-Regular,
    ItalicFont = *-Italic,
