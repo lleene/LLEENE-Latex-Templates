@@ -3,59 +3,40 @@
 % Modified by Lieuwe Leene, June 2019
 
 \mode<presentation>
+\newcommand{\FrontLogoA}{Style/IC_blue.pdf}
+\newcommand{\FrontLogoB}{Style/main_logo.pdf}
+\newcommand{\FootLogoA}{Style/banner_name_white.pdf}
+\newcommand{\FootLogoB}{Style/banner_icon.pdf}
+\newcommand{\BaseBackground}{Style/KM1801VM2_I.png}
+
+\newlength{\marginlength}%
+\setlength{\marginlength}{0.5cm}%
 
 %% This formats the title page
-\ifwideas %% this is a 16:9 paper format
 \setbeamercolor{basic}{bg=white,fg=white}
 \defbeamertemplate*{title page}{ngnitheme}{
-  \begin{beamercolorbox}[wd=\paperwidth, ht=\paperheight]{basic}
-  \setlength{\unitlength}{\paperwidth}%
-  \begin{picture}(1,1)%
-  %\put(0,0){\includegraphics[width=\paperwidth,clip=true,trim={0 0 0 3.5cm}]{Style/KM1801VM2_I.png}}
-  \put(0.04,0.25){%
-      \begin{minipage}{0.8\paperwidth}
+
+  \begin{beamercolorbox}[wd=\paperwidth]{basic}
+
+    \hspace{\marginlength} \parbox[c]{\dimexpr (\paperwidth-2\marginlength) \relax}{ %
+      \includegraphics[height=0.125\paperheight]{\FrontLogoA} %
+      \hfill %
+      \includegraphics[height=0.125\paperheight]{\FrontLogoB} %
+    }
+    \vspace{\marginlength}  \\
+    \hspace{\marginlength} \parbox[c]{\textwidth}{%
       \begin{flushleft}
-      \usebeamercolor[black]{title}
-      \usebeamerfont{title}\inserttitle\par
-      \usebeamerfont{subtitle}\insertsubtitle\par
-      \bigskip
-      \usebeamerfont{author}\insertauthor\par
-      \usebeamerfont{institute}\insertinstitute\par
-      \end{flushleft}
-      \end{minipage}
-  }
-  \put(0.03,0.465){\includegraphics[height=0.125\paperheight]{Style/IC_blue.pdf}}
-  \put(0.86,0.465){\includegraphics[height=0.15\paperheight]{Style/main_logo.pdf}}
-  \end{picture}
+        \usebeamercolor[black]{title}
+        \usebeamerfont{title}\inserttitle\par
+        \usebeamerfont{subtitle}\insertsubtitle\par
+        \bigskip
+        \usebeamerfont{author}\insertauthor\par
+        \bigskip
+        \usebeamerfont{institute}\insertinstitute\par
+      \end{flushleft}}
   \end{beamercolorbox}
   \vskip 0pt%
 }
-\else %% this is a 4:3 paper format
-\setbeamercolor{basic}{bg=white,fg=white}
-\defbeamertemplate*{title page}{ngnitheme}{
-  \begin{beamercolorbox}[wd=\paperwidth, ht=\paperheight]{basic}
-  \setlength{\unitlength}{\paperwidth}%
-  \begin{picture}(1,1)%
-  %\put(0,0){\includegraphics[width=\paperwidth]{Style/KM1801VM2_I.png}}
-  \put(0.04,0.3){%
-      \begin{minipage}{0.8\paperwidth}
-      \begin{flushleft}
-      \usebeamercolor[black]{title}
-      \usebeamerfont{title}\inserttitle\par
-      \usebeamerfont{subtitle}\insertsubtitle\par
-      \bigskip
-      \usebeamerfont{author}\insertauthor\par
-      \usebeamerfont{institute}\insertinstitute\par
-      \end{flushleft}
-      \end{minipage}
-  }
-  \put(0.03,0.61){\includegraphics[height=0.125\paperheight]{Style/IC_blue.pdf}}
-  \put(0.82,0.615){\includegraphics[height=0.15\paperheight]{Style/main_logo.pdf}}
-  \end{picture}
-  \end{beamercolorbox}
-  \vskip 0pt%
-}
-\fi
 
 
 %% This formats the the footer on every page
@@ -74,7 +55,7 @@
   \vskip 0pt%
 }
 
-\ifsectiontoc
+\ifx\nosectiontoc\undefined
 \AtBeginSection[]
 {
 \disablefooter
@@ -85,21 +66,16 @@
 }
 \fi
 
-\defbeamertemplate*{intermission}{ngnitheme}{
-	\begin{beamercolorbox}[wd=\paperwidth, ht=\paperheight]{basic}
-		\setlength{\unitlength}{\paperwidth}%
-		\begin{picture}(1,1)%
-		\put(0,0){\includegraphics[width=\paperwidth,clip=true,trim={0 0 0 0cm}]{Style/KM1801VM2_I.png}}
-		\put(0.04,0.2){%
-			\begin{minipage}{0.8\paperwidth}
-			\begin{centering}
-			TITLE NAME
-			\end{centering}
-			\end{minipage}
-		}
-		\end{picture}
-	\end{beamercolorbox}
-	\vskip 0pt%
+\newcommand{\enablefooter}[1]{
+%% Put the Footer Subtitle Here
+\subtitle{#1}
+%% This shows some Footer graphics
+\titlegraphic{\includegraphics[height=2.5ex, trim=1mm 2mm 20mm -1mm]{\FootLogoA}\includegraphics[width=2cm, angle=90, trim=-14mm -3mm 0mm 0mm]{\FootLogoB}}
+}
+
+\newcommand{\disablefooter}[0]{
+	\subtitle{}
+	\titlegraphic{}
 }
 
 \mode

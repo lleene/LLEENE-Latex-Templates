@@ -1,0 +1,137 @@
+% !TEX program = xelatex
+% !TEX spellcheck = en_GB
+% !TEX outputDirectory = tex_output
+% !TEX enableSynctex = true
+% !TEX jobNames = resume
+
+\makeatletter
+\def\input@path{{/home/user_name/MyLatexTemplates/}{../}}
+\newcommand{\maintitle}{\FirstName~\LastName}
+\newcommand{\mainsubject}{\JobTitle}
+\newcommand{\mainkeywords}{Resume}
+\def\fontscale{0.88}
+\makeatother
+
+\documentclass[letterpaper]{leene-resume} % Use US Letter paper, change to a4paper for A4
+\input{resume.preamble.cls}
+\usepackage[hmargin=1.25cm, vmargin=1.5cm]{geometry} % Specifies horizontal and vertical page margins
+\begin{document}
+\lastupdated % Print the Last Updated text at the top right
+\namesection
+
+
+
+\narrowcolumn{%
+
+\section{Education}
+
+\subsection{1st Elaborate Certification Name}
+Mon. 20XX | International Institution. Degree/Thesis topic description detailing what was certified or how it specialised.
+
+\sectionspace % Some whitespace after the section
+
+\subsection{2nd Elaborate Certification Name}
+Mon. 20XX | International Institution. Degree/Thesis topic description detailing what was certified or how it specialised.
+
+\sectionspace % Some whitespace after the section
+
+\subsection{3rd Elaborate Certification Name}
+Mon. 20XX | International Institution. Degree/Thesis topic description detailing what was certified or how it specialised.
+
+\sectionspace
+
+\section{Personal Interests}  
+\lipsum[11]
+
+\sectionspace
+
+\section{Skills}
+\lipsum[11]
+
+\subsectionspace
+
+\section{Links}
+Company:// \href{github.com/lleene}{Main Website} \\ %
+Social Media1:// \href{github.com/lleene}{Link/Handle-1} \\ %
+Social Media2:// \href{github.com/lleene}{Link/Handle-2} \\ %
+Social Media3:// \href{github.com/lleene}{Link/Handle-3} \\ %
+Social Media4:// \href{github.com/lleene}{Link/Handle-4} \\ %
+
+\bigskip
+
+\includegraphics[width=4cm,trim={0 0 0 -1mm},clip=true]{Style/latex_logo.pdf}
+
+}%
+\hfill%
+\widecolumn{%
+\section{Profile}
+
+\lipsum[4]
+
+\sectionspace
+
+\section{Employment \& Professional Experience}
+
+\subsection{Most Recent Job Title | Starting Date – Present }
+\textcomment{Organisation Name, location of placement position, Country.}
+
+$\blacktriangleright$ Details regarding your main role stating objectively what you did and what your main objectives where while acting in this position. Being elaborate here important since you must highlight your competence, reliability, and inclination to be involved.
+
+\smallskip
+
+$\blacktriangleright$ Details regarding any other role stating objectively what you did and what your main objectives where while acting in this position. Being elaborate here important since you must highlight your competence, reliability, and inclination to be involved.
+
+\bigskip
+
+\begin{tightitemize}
+	\item List any other responsibilities or activities you were involved in
+	\item List any other responsibilities or activities you were involved in
+	\item List any other responsibilities or activities you were involved in
+\end{tightitemize}
+
+\subsectionspace
+
+\subsection{Another Job Title | Starting Date – Ending Date}
+\textcomment{Organisation Name, location of placement position, Country.}
+
+$\blacktriangleright$ Details regarding your main role stating objectively what you did and what your main objectives where while acting in this position.
+
+\begin{tightitemize}
+	\item List any other responsibilities or activities you were involved in
+	\item List any other responsibilities or activities you were involved in
+	\item List any other responsibilities or activities you were involved in
+\end{tightitemize}
+
+\subsectionspace
+
+\subsection{Another Job Title | Starting Date – Ending Date}
+\textcomment{Organisation Name, location of placement position, Country.}
+
+$\blacktriangleright$ Details regarding your main role stating objectively what you did and what your main objectives where while acting in this position.
+
+\begin{tightitemize}
+	\item List any other responsibilities or activities you were involved in
+	\item List any other responsibilities or activities you were involved in
+	\item List any other responsibilities or activities you were involved in
+\end{tightitemize}
+
+\sectionspace
+
+\section{List of Outstanding Achievements}
+\vspace{2mm}
+\begin{tightitemize}
+\item List any Award, Publication, Project, or other item for which you would like to receive recognition together with a comment and any hyper link.
+\item List any Award, Publication, Project, or other item for which you would like to receive recognition together with a comment and any hyper link.
+\item List any Award, Publication, Project, or other item for which you would like to receive recognition together with a comment and any hyper link.
+\end{tightitemize}
+
+
+\sectionspace
+
+\section{Other Activities / External Involvement}
+
+\subsection{Title, Organisation, Activity, or Other}
+\lipsum[4]
+}
+
+\end{document}

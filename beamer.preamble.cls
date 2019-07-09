@@ -23,11 +23,10 @@
 \usepackage{graphicx}  % figures, graphics, etc.
 \usepackage{latexsym}  % Optional extra symbols from LaTeX2.09
 \usepackage{amsmath,amssymb}   % Math formatting & symbols
-
-\usepackage{subfigure} % Introduce Subfigures
-\usepackage{cite}      % Citation handle
-\usepackage{xcolor} % Colour
-\usepackage{booktabs}
+\usepackage{subfigure} % Introduce sub-figures
+\usepackage{cite} % Citation handle
+\usepackage{xcolor} % Colour formatting
+\usepackage{booktabs} % Tabe formatting
 
 \makeatletter
 \def\bstctlcite{\@ifnextchar[{\@bstctlcite}{\@bstctlcite[@auxout]}}
@@ -66,7 +65,7 @@
 \newlength{\tpagewidth}
 \setlength{\tpagewidth}{0.27\paperwidth}
 
-\newcommand{\itmcol}[2]{%
+\newcommand{\itemcolumn}[2]{%
 	\begin{minipage}{\dpagewidth} \flushleft
 	\begin{itemize}
 		#1
@@ -78,7 +77,7 @@
 	\end{minipage}
 }
 
-\newcommand{\enmcol}[2]{%
+\newcommand{\enumcolumn}[2]{%
 	\begin{minipage}{\dpagewidth} \flushleft
 		\begin{enumerate}
 			#1
@@ -90,7 +89,7 @@
 	\end{minipage}
 }
 
-\newcommand{\dblcol}[2]{%
+\newcommand{\doublecolumn}[2]{%
 \begin{minipage}{\dpagewidth} \flushleft
 		#1
 \end{minipage}%
@@ -100,7 +99,7 @@
 \end{minipage}
 }
 
-\newcommand{\tplcol}[3]{%
+\newcommand{\triplecolumn}[3]{%
 \begin{minipage}{\tpagewidth} \flushleft
 		#1
 \end{minipage}%
@@ -114,19 +113,19 @@
 \end{minipage}
 }
 
-\newcommand{\sglenum}[1]{%
+\newcommand{\singleenum}[1]{%
 \begin{enumerate}
 #1
 \end{enumerate}
 }
 
-\newcommand{\sglitm}[1]{%
+\newcommand{\singleitem}[1]{%
 \begin{itemize}
 \item #1
 \end{itemize}
 }
 
-\newcommand{\dblenm}[2]{%
+\newcommand{\doubleenum}[2]{%
 \begin{minipage}{\dpagewidth} \flushleft
 \begin{enumerate}
 #1
@@ -140,7 +139,7 @@
 \end{minipage}
 }
 
-\newcommand{\dblitm}[2]{%
+\newcommand{\doubleitem}[2]{%
 \begin{minipage}{\dpagewidth} \flushleft
 \begin{itemize}
 #1
@@ -155,24 +154,12 @@
 }
 
 \newcommand{\inserttoc}[0]{
-\ifsectiontoc
+\ifx\nosectiontoc\undefined
 \else
 \begin{frame}{Table of Contents}
 \tableofcontents
 \end{frame}
 \fi
-}
-
-\newcommand{\enablefooter}[1]{
-%% Put the Footer Subtitle Here
-\subtitle{#1}
-%% This shows some Footer graphics
-\titlegraphic{\includegraphics[height=2.5ex, trim=1mm 2mm 20mm -1mm]{Style/banner_name_white.pdf}\includegraphics[width=2cm, angle=90, trim=-14mm -3mm 0mm 0mm]{Style/banner_icon.pdf}}
-}
-
-\newcommand{\disablefooter}[0]{
-	\subtitle{}
-	\titlegraphic{}
 }
 
 \input{default_symbols.cls}

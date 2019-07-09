@@ -1,14 +1,16 @@
 %% Default Author details used by scripts
 %% Several fields below can accommodate URL links
-\newcommand{\Salutation}{Dr.}
-\newcommand{\FirstName}{Lieuwe}
-\newcommand{\LastName}{Leene}
-\newcommand{\Certification}{PhD}
-\newcommand{\Email}{l.leene@ic.ac.uk}
-\newcommand{\Title}{Research Associate}
-\newcommand{\Group}{Next Generation Neural Interfaces Lab}
-\newcommand{\Organisation}{Centre for Bio-Inspired Technology \\ Department of Electrical and Electronic Engineering}
-\newcommand{\Address}{Dept. EEE, Exhibition Road \\ London, SW7 2AZ, UK}
-\newcommand{\Telephone}{+44 (0)75447575250}
-\newcommand{\LinkedIn}{lieuwe-leene}
-\newcommand{\Website}{www.imperial.ac.uk/neural-interfaces}
+\makeatletter
+\newcommand{\Salutation}{Mr.}
+\newcommand{\FirstName}{John}
+\newcommand{\LastName}{Dough}
+\newcommand{\Certification}{MEng}
+\newcommand{\Email}{j.dough@baker.br}
+\newcommand{\JobTitle}{Technical Oven Assistant}
+\newcommand{\Group}{Main Baking staff for Bread}
+\newcommand{\Organisation}{A Baking Company for Bread, Anytown, USA}
+\newcommand{\Address}{123 Main St, Anytown, 90210 USA}
+\newcommand{\Telephone}{+88 (0)8888 888888}
+\newcommand{\LinkedIn}{john-dough}
+\newcommand{\Website}{www.baker.br/oven-corner}
+\makeatother

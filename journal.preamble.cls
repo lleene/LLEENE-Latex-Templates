@@ -10,27 +10,7 @@
 % PACKAGES -  Comment any package deemed unnecessary  %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-\usepackage{graphicx}  % figures, graphics, etc.
-\usepackage{verbatim}  % Allow comments \be­gin{com­ment} and \end{com­ment}
-\usepackage{latexsym}  % Optional extra symbols from LaTeX2.09
-\usepackage{amsmath,amssymb}   % Math formatting & symbols
-
-%Specific for AMSMATH - (re)allows page breaks within aligned equations as IEEEtran normally does.
-\interdisplaylinepenalty=2500
-
-\usepackage{subfigure} % Introduce Subfigures
-\usepackage{cite}      % Citation handle
-\usepackage[table,dvipsnames]{xcolor} % Colour
-\usepackage[nomessages]{fp} % More advanced command customization
-\usepackage{booktabs}
-
-\iflinks
-\usepackage[pdfauthor={\FirstName~\LastName},
-            pdftitle={\pdftitle},
-            pdfsubject={\pdfsubject},
-            pdfkeywords={\pdfkeywords},
-            colorlinks = true,hypertexnames=true]{hyperref}
-\fi
+\input{default_packages.cls}
 
 % % % % % % % % % % % % % % % % % % % %
 % DOCUMENT - configuration / commands %
@@ -48,16 +28,6 @@
 % Figure config/normalization paramters
 \newlength{\lcbox}
 \setlength{\lcbox}{10cm}
-
-\iflinks
-% Configure Hyperlink Colours and inline references
-\hypersetup{
-	colorlinks,
-	linkcolor={red!75!black},
-	citecolor={blue!60!black},
-	urlcolor={blue!80!black}
-}
-\fi
 
 \input{default_symbols.cls}
 

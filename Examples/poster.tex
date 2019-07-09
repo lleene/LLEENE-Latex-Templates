@@ -1,0 +1,66 @@
+% !TEX program = pdflatex
+% !TEX spellcheck = en_GB
+% !TEX outputDirectory = tex_output
+% !TEX enableSynctex = true
+% !TEX jobNames = poster
+
+\makeatletter
+\def\input@path{{/home/user_name/MyLatexTemplates/}{../}}
+\newcommand{\maintitle}{A Nice Poster Title}
+\newcommand{\mainsubject}{Example Poster}
+\newcommand{\mainkeywords}{Keywords}
+\makeatother
+
+%uncomment to disable hyperref package
+%\newcommand{\nolinks}{}
+
+\documentclass{enginiposter}
+\input{poster.preamble.cls}
+\begin{document}
+\bstctlcite{IEEEexample:BSTcontrol}
+
+\title{\maintitle}
+\author{\FirstName~\LastName}
+\address{\Organisation}
+\maketitle
+%prepare the header + introduction using two banners
+\vspace{\marginlength}
+
+\contentbanner{ngniharm1}{ngnibg}{
+\triplecolumn{%
+  \usection{Summary}
+  	\lipsum[2]
+  }{%
+  \usection{Itemized Content}
+  \begin{itemize}
+    \item Elaborate Item 1
+    \item Elaborate Item 2
+    \item Elaborate Item 3
+    \item Elaborate Item 4
+  \end{itemize}
+  }{%
+  \includegraphics[width=8cm]{Style/phone.pdf}
+}}
+
+\clearbackground
+
+\doubleframe{\labelitemi header1}{%
+  \lipsum[3]~\cite{refernce1}
+
+\mdfsubtitle{ \labelitemi header2} \color{black}
+  \lipsum[4]~\cite{refernce2}
+
+}{\labelitemi header3}{%
+  \lipsum[5]~\cite{refernce3}
+
+\mdfsubtitle{ \labelitemi header4} \color{black}
+    \lipsum[6]~\cite{refernce4}
+
+}
+
+\ngnifooter{\small%
+\bibliographystyle{IEEEtran}%
+\bibliography{IEEEabrv,IEEEbst,local}%
+}%
+
+\end{document}

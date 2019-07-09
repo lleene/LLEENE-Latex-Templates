@@ -4,20 +4,20 @@
 %Please See http://www.michaelshell.org/tex/ieeetran/ For details
 
 \input{personal_details.cls} %% Load author details
+\input{default_packages.cls} %% Load standard package setup
 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % %
-% PACKAGES -  Comment any package deemed unnecessary  %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\newcommand{\narrowcolumn}[1]{%
+\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
+#1%
+\end{minipage} % The end of the left column
+}
 
-\usepackage{amsmath,amssymb}   % Math formatting & symbols
-\usepackage{graphicx}
-\usepackage{qrcode}
+\newcommand{\widecolumn}[1]{%
+\begin{minipage}[t]{0.62\textwidth} % The left column takes up 33% of the text width of the page
+#1
+\end{minipage} % The end of the left column
+}
 
-\usepackage[pdfauthor={\FirstName~\LastName},
-            pdftitle={C.V.~\FirstName~\LastName},
-            pdfsubject={Curriculum Vitae/Resume},
-            pdfkeywords={IC designer, Mixed signal, Data converter, System-On-Chip, Imperial College, Research associate},
-            colorlinks = true, allcolors = blue ]{hyperref}
-%\newcommand{\MYhref}[3][blue]{\href{#2}{\color{#1}{#3}}}%
+\newcommand{\textcomment}[1]{{\fontseries{l}\selectfont \small #1}}
 
 \input{default_symbols.cls} %% Load author details

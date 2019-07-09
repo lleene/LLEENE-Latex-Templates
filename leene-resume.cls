@@ -28,9 +28,7 @@
 
 \providecommand{\fontscale}{1} % load default if not set
 \setmainfont
-% [Path = /home/lbl11/Latex/Fonts/IBM-Plex-Sans/,
-% [Path = ../Latex/Fonts/IBM-Plex-Sans/,
- [Path = ../../Latex/Fonts/IBM-Plex-Sans/,
+ [Path = ../Fonts/IBM-Plex-Sans/,
    Scale=\fontscale,
    UprightFont = *-Regular,
    ItalicFont = *-Italic,
@@ -57,7 +55,7 @@
 \setlength{\TPHorizModule}{0.01\paperwidth} % Sets the units for the horizontal position used in the \begin{textblock} argument
 \setlength{\TPVertModule}{0.01\paperwidth} % Sets the units for the vertical position used in the \begin{textblock} argument
 \newcommand{\lastupdated}{ % Create a new command for printing the Last Updated text
-\begin{textblock}{50}(70,13.5 ) % The position of the Last Updated text on the page (75% of the page across, 2% down)
+\begin{textblock}{23}(75,13.5) % The position of the Last Updated text on the page
 \flushleft{
 \color{date}\fontseries{l}\selectfont \small \selectfont % Text styling of the text
 Last Updated on \today } % Last Updated text
@@ -67,17 +65,17 @@ Last Updated on \today } % Last Updated text
 %	MAIN HEADING COMMAND
 %----------------------------------------------------------------------------------------
 
-\newcommand{\makefrontcard}{ % Defines the command for the main heading
+\newcommand{\makefrontcard}[1]{ % Defines the command for the main heading
 \setlength{\unitlength}{12mm}
 \flushleft
 \begin{picture}(1,1)
-\put(0,0.2){\includegraphics[height=10mm]{Style/IC_black.eps}}
+\put(0,0.2){\includegraphics[height=10mm]{#1}}
 \end{picture}
 \vfill
 \textbf{{\Large \FirstName\:~\LastName} \hspace{2mm}\ {\small \Certification}}\\
-\Title\\
+\JobTitle\\
 \vspace{2mm}
-{\small
+\small
 {\fontseries{t}\selectfont \Group} \\
 {\fontseries{t}\selectfont \Address} \\
 \vspace{2mm}
@@ -86,13 +84,13 @@ Last Updated on \today } % Last Updated text
 {\fontseries{l}\selectfont \includegraphics[height=2mm]{Style/phone.pdf}%
  \,\Telephone \hspace{2cm}\includegraphics[height=2mm]{Style/envelope.pdf}\,\Email } \\
 {\fontseries{l}\selectfont \Website }
-}}
+}
 
-\newcommand{\makebackcard}{ % paperwidth=85mm,paperheight=55mm
+\newcommand{\makebackcard}[1]{ % paperwidth=85mm,paperheight=55mm
 \begin{figure}
 \centering
 \setlength{\fboxrule}{0pt}
-\includegraphics[width=60mm]{Style/IC_black.eps}
+\includegraphics[width=60mm]{#1}
 \end{figure}
 }
 
@@ -104,10 +102,10 @@ Last Updated on \today } % Last Updated text
 {\fontseries{m}\selectfont \LastName} % Last name font
 \vspace{0.45cm}} \\[5pt] % Whitespace between the name and contact information
 
-\begin{textblock}{30}(70,4)
+\begin{textblock}{23}(75,4)
 \vline
 \flushleft{\color{headings}%
-{\fontseries{l}\selectfont Address:} \Address \\
+{\fontseries{l}\selectfont Address:} \Address \\ 
 {\fontseries{l}\selectfont Mobile:} \Telephone \\
 {\fontseries{l}\selectfont Email:} \Email \\ }
 \end{textblock}
