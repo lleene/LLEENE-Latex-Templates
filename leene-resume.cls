@@ -105,13 +105,13 @@ Last Updated on \today } % Last Updated text
 \begin{textblock}{23}(75,4)
 \vline
 \flushleft{\color{headings}%
-{\fontseries{l}\selectfont Address:} \Address \\ 
+{\fontseries{l}\selectfont Address:} \Address \\
 {\fontseries{l}\selectfont Mobile:} \Telephone \\
 {\fontseries{l}\selectfont Email:} \Email \\ }
 \end{textblock}
 
 \noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}} % Horizontal rule
-\vspace{-5pt} % Reduce whitespace after the rule slightly
+\par
 }
 
 %----------------------------------------------------------------------------------------
@@ -135,8 +135,6 @@ Last Updated on \today } % Last Updated text
 \titleformat{\subsection}{ % Customize the subsections and places worked/studied titles
 \color{subheadings} \fontsizesection \bfseries}{}{0em}{}
 
-%\newcommand{\descript}[1]{ % Used for describing the subsection either on the same line or underneath
-%\color{subheadings}\raggedright\scshape \fontseries{r} \selectfont {#1} \normalfont}
 
 %----------------------------------------------------------------------------------------
 %	SECTION TITLE STYLING AND SPACING

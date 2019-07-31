@@ -19,11 +19,11 @@
   \begin{beamercolorbox}[wd=\paperwidth]{basic}
 
     \hspace{\marginlength} \parbox[c]{\dimexpr (\paperwidth-2\marginlength) \relax}{ %
-      \includegraphics[height=0.125\paperheight]{\FrontLogoA} %
+      \includegraphics[height=0.05\paperheight, trim={0 0 0 2.2cm}]{\FrontLogoA} %
       \hfill %
-      \includegraphics[height=0.125\paperheight]{\FrontLogoB} %
+      \includegraphics[height=0.05\paperheight, trim={0 0 0 4cm}]{\FrontLogoB} %
     }
-    \vspace{\marginlength}  \\
+    \vspace{1.5\marginlength}  \\
     \hspace{\marginlength} \parbox[c]{\textwidth}{%
       \begin{flushleft}
         \usebeamercolor[black]{title}
@@ -34,6 +34,7 @@
         \bigskip
         \usebeamerfont{institute}\insertinstitute\par
       \end{flushleft}}
+
   \end{beamercolorbox}
   \vskip 0pt%
 }

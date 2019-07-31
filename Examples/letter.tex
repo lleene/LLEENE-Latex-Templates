@@ -1,0 +1,39 @@
+% !TeX program = xelatex
+% !TeX spellcheck = en_GB
+% !TEX outputDirectory = tex_output
+% !TEX enableSynctex = true
+% !TEX jobNames = letter
+
+\makeatletter
+\def\input@path{{/home/user_name/MyLatexTemplates/}{../}}
+\newcommand{\maintitle}{Letter Title}
+\newcommand{\mainsubject}{Example Letter} 
+\newcommand{\mainkeywords}{Keywords}
+\makeatother
+
+\newcommand{\placelogo}{Style/latex_logo.pdf}
+\documentclass[blank]{impletter}
+\input{letter.preamble.cls}
+\begin{document}
+\bstctlcite{IEEEexample:BSTcontrol}
+
+\headers{
+Exemplary reference letter
+
+}
+% Replace with the salutation for this letter
+{
+Dear Sir/Madam,
+}
+\informal
+
+\lipsum[1-4] \cite{refernce1,refernce2,refernce3}
+
+\close{
+Yours sincerely,
+}
+
+\usection{References}
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,IEEEbst,local}
+\end{document}

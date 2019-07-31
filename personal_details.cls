@@ -13,4 +13,5 @@
 \newcommand{\Telephone}{+88 (0)8888 888888}
 \newcommand{\LinkedIn}{john-dough}
 \newcommand{\Website}{www.baker.br/oven-corner}
+\newcommand{\Creditation}{Chef}
 \makeatother

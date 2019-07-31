@@ -1,14 +1,16 @@
 % Defines common elements for Imperial College LaTeX styles
 % James Keirstead
 % 19 June 2014
-% Modified by Lieuwe Leene, June 2019
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{imperial-common}[2014/06/19 Imperial College common package]
 
 % Define logo
 \RequirePackage{graphicx}
-\newcommand{\imperiallogo}{imperial-logo}
+\newcommand{\placelogocmd}{\includegraphics{\placelogo}}
+\ifx\placelogo\undefined
+\renewcommand{\placelogocmd}{}
+\fi
 
 % Define colors
 \RequirePackage{xcolor}
@@ -29,24 +31,64 @@
 \ifxetex
   \RequirePackage{fontspec}
   \defaultfontfeatures{Mapping=tex-text}
-  \setmainfont{Minion Pro}
-  \setsansfont[Scale=0.875]{Arial}
-  \setmonofont[Scale=0.9]{Consolas}
+  %\setmainfont{FreeSans}
+  %\setsansfont[Scale=0.875]{FreeSans}
+  %\setmonofont[Scale=0.9]{FreeSans}
+
+  \setmainfont
+   [Path = ../Fonts/IBM-Plex-Serif/,
+     UprightFont = *-Regular,
+     ItalicFont = *-Italic,
+     BoldFont = *-Bold,
+     BoldItalicFont = *-BoldItalic,
+     FontFace = {t}{n}{*-Thin},
+     FontFace = {t}{it}{*-ThinItalic},
+     FontFace = {l}{n}{*-Light},
+     FontFace = {l}{it}{*-LightItalic},
+     FontFace = {sb}{n}{*-SemiBold},
+     FontFace = {sb}{it}{*-SemiBoldItalic},
+     FontFace = {m}{n}{*-Medium},
+     FontFace = {m}{it}{*-MediumItalic},
+     FontFace = {b}{n}{*-Bold},
+     FontFace = {b}{it}{*-BoldItalic},
+     Ligatures=TeX]
+    {IBMPlexSerif}
+  \setsansfont
+   [Path = ../Fonts/IBM-Plex-Sans/,
+     UprightFont = *-Regular,
+     ItalicFont = *-Italic,
+     BoldFont = *-Bold,
+     BoldItalicFont = *-BoldItalic,
+     FontFace = {t}{n}{*-Thin},
+     FontFace = {t}{it}{*-ThinItalic},
+     FontFace = {l}{n}{*-Light},
+     FontFace = {l}{it}{*-LightItalic},
+     FontFace = {sb}{n}{*-SemiBold},
+     FontFace = {sb}{it}{*-SemiBoldItalic},
+     FontFace = {m}{n}{*-Medium},
+     FontFace = {m}{it}{*-MediumItalic},
+     FontFace = {b}{n}{*-Bold},
+     FontFace = {b}{it}{*-BoldItalic},
+     Ligatures=TeX]
+    {IBMPlexSans}
+  \setmonofont
+   [Path = ../Fonts/IBM-Plex-Mono/,
+     UprightFont = *-Regular,
+     ItalicFont = *-Italic,
+     BoldFont = *-Bold,
+     BoldItalicFont = *-BoldItalic,
+     FontFace = {t}{n}{*-Thin},
+     FontFace = {t}{it}{*-ThinItalic},
+     FontFace = {l}{n}{*-Light},
+     FontFace = {l}{it}{*-LightItalic},
+     FontFace = {sb}{n}{*-SemiBold},
+     FontFace = {sb}{it}{*-SemiBoldItalic},
+     FontFace = {m}{n}{*-Medium},
+     FontFace = {m}{it}{*-MediumItalic},
+     FontFace = {b}{n}{*-Bold},
+     FontFace = {b}{it}{*-BoldItalic},
+     Ligatures=TeX]
+    {IBMPlexMono}
 \else
   \PackageWarning{Custom fonts not supported.  Please use xelatex instead.}
 \fi
-
-% Set up hyperref style
-\RequirePackage{hyperref}
-\hypersetup{draft=false,%
-	bookmarks=true,%
-	pageanchor=true,%
-	bookmarksnumbered=true,	%
-        bookmarksopen=false,%
-	colorlinks=true,%
-	linkcolor=ImperialBlue,%
-	urlcolor=ImperialBrown,%
-	anchorcolor=black,%
-	filecolor=black,%
-	menucolor=black,%
-	citecolor=black}

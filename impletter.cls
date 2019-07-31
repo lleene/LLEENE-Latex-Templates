@@ -1,7 +1,7 @@
 % Imperial College London letterhead class
 % LdC Foulkes January 2003
+%
 % Modified by James Keirstead, June 2014
-% Modified by Lieuwe Leene, June 2019
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{impletter}[2014/06/19 Imperial College Letter]
@@ -13,18 +13,14 @@
 
 % Load last because it has the hyperref loading in it
 \RequirePackage{imperial-common}
-\ifxetex
-  \RequirePackage{fontawesome}
-\else
-  \newcommand{\faPhone}{Tel}
-  \newcommand{\faEnvelope}{}
-\fi
+%\RequirePackage{fontawesome}
+
 
 % Blank paper
 \DeclareOption{blank}{%
 	\pagestyle{fancy}
 	\lhead{%
-	\resizebox{52.5mm}{!}{\includegraphics{\imperiallogo}}}%
+	\resizebox{52.5mm}{!}{\placelogocmd}}%
 	\renewcommand\headrulewidth{0pt}
 	\lfoot{%
 	\vspace*{10.5mm}
@@ -178,9 +174,9 @@
   \college\\
 
   \@address\\
-  \faPhone\ \@telephone\ifthenelse{\equal{\@fax}{}}{}{, Fax \@fax}\\
+  \includegraphics[width=10pt]{Style/phone.pdf}\ \@telephone\ifthenelse{\equal{\@fax}{}}{}{, Fax \@fax}\\
 
-  \faEnvelope\ \href{mailto:\@email}{\textcolor{black}{\@email}}\\
+  \includegraphics[width=10pt]{Style/envelope.pdf}\ \href{mailto:\@email}{\textcolor{black}{\@email}}\\
   \href{http://\@web}{\textcolor{black}{\@web}}\\
 %  \vspace*{4mm}\\
 

@@ -31,6 +31,9 @@
 %In-line root Mat
 \newcommand{\rtxt}[1]{$\sqrt{\text{#1}}$}
 
+%In-line bold math
+\newcommand{\hiddentext}[1]{}
+
 % % % % % % % % % % % % % % % % % % % %
 % SYMBOLS - TEXTMODE/MATHMODE List    %
 % % % % % % % % % % % % % % % % % % % %
