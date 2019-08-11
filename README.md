@@ -38,5 +38,13 @@ The above setup will works with latexmk which is integrated into many other soft
 ### Xelatex and Custom Fonts
 When using xelatex with custom fonts the font must either be installed on the local machine or preferably linked during compilation. Here style files will specify a font path that should be adjusted depending on your build setup using a relative or absolute path (e.g. Path = /home/$user_name/MyLatexTemplates/Fonts/IBM-Plex-Sans/).
 
+### Keeping Track of Publication Statistics
+Currently the resume class introduces the functionality to import a list of publications and accumulate statistics for total items, citations, and online access such that this can be concisely reported.
+
 ### Planned Changes
-Several logos or design components are hard baked into the theme (beamerouterthemengni.sty). At this moment is seem that it is better to simple write a new style for a different set of icons but possibly these can be loaded by reference in future revisions. Please report any bugs or feature requests as this is intended to be a slow work in progress...
+Several logos or design components are hard baked into the theme (beamerouterthemengni.sty). At this moment is seem that it is better to simple write a new style for a different set of icons but possibly these can be loaded by reference in future revisions.
+
+It would also be nice if some kind of script parses the publication list and fetches updated statistics from IEEE/GoogleScholar when relevant.
+
+### Feedback
+Please report any bugs or feature requests as this is intended to be a regular side project.

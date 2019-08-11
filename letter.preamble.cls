@@ -15,10 +15,9 @@
 \web{\Website}
 \nametitle{\Salutation}
 \author{\FirstName~\LastName}
-\postnoms{\Creditation}
+\postnoms{\Creditation} 
 \jobtitle{\JobTitle}
-
-
+%\signature{signature.png}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % PACKAGES -  Comment any package deemed unnecessary  %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % %

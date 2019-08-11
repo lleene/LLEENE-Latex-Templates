@@ -13,7 +13,7 @@
 
 % Load last because it has the hyperref loading in it
 \RequirePackage{imperial-common}
-%\RequirePackage{fontawesome}
+\RequirePackage{lastpage}
 
 
 % Blank paper
@@ -26,8 +26,13 @@
 	\vspace*{10.5mm}
 	\hspace*{-1.8mm}
 	\fontsize{9}{11pt}%\usefont{OT1}{cmss}{m}{n}
-	Imperial College of Science, Technology and Medicine}%
+  \Organisation}%
 	\cfoot{}
+	\rfoot{%
+	\vspace*{10.5mm}
+	\fontsize{9}{11pt}%\usefont{OT1}{cmss}{m}{n}
+	\FirstName~\LastName~\:\:
+	\thepage{}\,/\,\pageref*{LastPage}}%
 }%
 % % Personalised letterhead paper
 \DeclareOption{headed}{%
@@ -147,6 +152,9 @@
  \end{tabular}
 }
 
+\newcommand{\phoneicon}{\includegraphics[width=10pt]{Style/phone.pdf}}
+\newcommand{\emailicon}{\includegraphics[width=10pt]{Style/envelope.pdf}}
+
 % Header for logo and blank paper consists of a table with two paragraph boxes.
 \newcommand{\headers}[2]{
  \begin{tabular}{@{}p{95mm}@{}p{90mm}}
@@ -174,9 +182,9 @@
   \college\\
 
   \@address\\
-  \includegraphics[width=10pt]{Style/phone.pdf}\ \@telephone\ifthenelse{\equal{\@fax}{}}{}{, Fax \@fax}\\
+  \phoneicon\ \@telephone\ifthenelse{\equal{\@fax}{}}{}{, Fax \@fax}\\
 
-  \includegraphics[width=10pt]{Style/envelope.pdf}\ \href{mailto:\@email}{\textcolor{black}{\@email}}\\
+\emailicon\ \href{mailto:\@email}{\textcolor{black}{\@email}}\\
   \href{http://\@web}{\textcolor{black}{\@web}}\\
 %  \vspace*{4mm}\\
 

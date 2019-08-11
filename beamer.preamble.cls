@@ -14,7 +14,9 @@
 \input{personal_details.cls}  %% Load author details
 
 % Beamer already loads the hyperref package automatically
+\ifx\nolinks\undefined
 \hypersetup{pdftitle={\maintitle},pdfauthor={\FirstName~\LastName}, pdfsubject={\mainsubject}, pdfkeywords={\mainkeywords}}
+\fi
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % PACKAGES -  Comment any package deemed unnecessary  %
@@ -159,6 +161,14 @@
 \begin{frame}{Table of Contents}
 \tableofcontents
 \end{frame}
+\fi
+}
+
+\newcommand{\linkwebsite}{
+\ifx\nolinks\undefined
+\href{\Website}{\Website}
+\else
+\Website
 \fi
 }
 

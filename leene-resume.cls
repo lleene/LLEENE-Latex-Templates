@@ -9,19 +9,22 @@
 \ProcessOptions\relax
 \LoadClass{article}
 
-\pagenumbering{gobble} % Do not show page numbers
-\usepackage[absolute]{textpos} % Required for positioning the Last Updated text at the top right of the page
-\usepackage[UKenglish]{isodate} % Prints the Last Updated date in UK English format
-\usepackage{enumitem}
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+
+%\pagenumbering{gobble} % Do not show page numbers
+\RequirePackage[absolute]{textpos} % Required for positioning the Last Updated text at the top right of the page
+\RequirePackage[UKenglish]{isodate} % Prints the Last Updated date in UK English format
+\RequirePackage{enumitem}
 \setlist[itemize]{leftmargin=*}
 
-\usepackage{titlesec} % Required for customizing section/subsection/etc titles
+\RequirePackage{titlesec} % Required for customizing section/subsection/etc titles
 \titlespacing{\section}{0pt}{0pt}{0pt} % Removes the spacing around the main section titles
 \titlespacing{\subsection}{0pt}{0pt}{0pt} % Removes the spacing around the subsections
 \newcommand{\sectionspace}{\vspace{12pt}} % Defines a command to add a set amount of space after sections and subsections
 \newcommand{\subsectionspace}{\vspace{6pt}}
 
-\usepackage{fontspec} % Required for specifying custom fonts in XeLaTeX
+\RequirePackage{fontspec} % Required for specifying custom fonts in XeLaTeX
 \newcommand{\fontsizeheadline}{\fontsize{40pt}{36pt}}
 \newcommand{\fontsizeheading}{\fontsize{16pt}{24pt}}
 \newcommand{\fontsizesection}{\fontsize{12pt}{12pt}}
@@ -118,12 +121,14 @@ Last Updated on \today } % Last Updated text
 %	FOOT NOTE COMMAND
 %----------------------------------------------------------------------------------------
 
-\newcommand{\tailsection}[2]{
-	\vfill
-	\Salutation~\FirstName~\LastName --- Curriculum Vitae \hfill Page: {#1} | {#2}
-	\vspace{-4mm}
-	\clearpage
-}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{\Salutation~\FirstName~\LastName --- \mainsubject}
+\rfoot{\hfill Page: \thepage{} | \pageref*{LastPage}}
+\fancyheadoffset[loh,reh]{20mm}
+
+\newcommand{\tailsection}{}
 
 %----------------------------------------------------------------------------------------
 %	SECTION TITLE STYLING AND SPACING
@@ -148,7 +153,7 @@ Last Updated on \today } % Last Updated text
 %	COLORS
 %----------------------------------------------------------------------------------------
 
-\usepackage{xcolor} % Required for custom colors
+\RequirePackage{xcolor} % Required for custom colors
 %\definecolor{primary}{HTML}{2b2b2b} % The primary document color for content text
 \definecolor{primary}{HTML}{131313} % The primary document color for content text
 %\definecolor{headings}{HTML}{6A6A6A} % The color of the large sections

@@ -6,6 +6,18 @@
 \input{personal_details.cls} %% Load author details
 \input{default_packages.cls} %% Load standard package setup
 
+\usepackage{ifthen}
+
+% Publication Statistic Counters
+\newcounter{PublicationCount} 
+\newcounter{CitationCount}
+\newcounter{ViewCount}
+
+\newcommand{\citecondition}[1]{\ifthenelse{\equal{#1}{0}}{}{\ifthenelse{\equal{#1}{1}}{#1 Citation, }{#1 Citations, }}}
+\newcommand{\viewcondition}[1]{\ifthenelse{\equal{#1}{0}}{}{\ifthenelse{\equal{#1}{1}}{#1 View}{#1 Views}}}
+\newcommand{\pubitem}[3]{ \item #1\,\textbf{(\citecondition{#2}\viewcondition{#3}) } \stepcounter{PublicationCount}\addtocounter{CitationCount}{#2}\addtocounter{ViewCount}{#3}}
+\newcommand{\xpubitem}[3]{ \item #1 \stepcounter{PublicationCount}\addtocounter{CitationCount}{#2}\addtocounter{ViewCount}{#3}}
+
 \usepackage[hmargin=1.25cm, vmargin=1.5cm]{geometry} % Specifies horizontal and vertical page margins
 
 \makeatletter
