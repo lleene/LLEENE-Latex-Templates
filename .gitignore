@@ -1,6 +1,7 @@
 ## Personal Files and Details
-Examples/tex_output
+Examples/tex_output/
 Documents/
+personal_details.cls
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
