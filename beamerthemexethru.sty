@@ -1,0 +1,55 @@
+% Modified Beamer Style sheet for Xethru publications
+% Created by: Lieuwe B. Leene 2020 Jan
+
+\mode<presentation>
+
+\newif\ifbeamer@secheader
+\beamer@secheaderfalse
+\DeclareOptionBeamer{secheader}{\beamer@secheadertrue}
+\ProcessOptionsBeamer
+\useoutertheme{xethru}
+
+% color definitions
+\definecolor{xethrublack}{RGB}{20,0,20}
+\definecolor{xethruwhite}{RGB}{255,240,255}
+\definecolor{xethrusecondary}{RGB}{10,10,40}
+
+% footer styling
+\setbeamerfont{footnote}{size=\scriptsize}
+\setbeamercolor{footnote}{fg=white,bg=xethrusecondary}
+
+% set the title color
+\setbeamercolor{title}{fg=xethruwhite}
+\setbeamerfont{title}{size=\LARGE}
+\setbeamercolor{author}{fg=xethruwhite}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamercolor{institute}{fg=xethruwhite}
+\setbeamerfont{institute}{size=\normalsize}
+
+% set colors for specific elements
+\setbeamercolor{block}{fg=xethrublack}
+\setbeamercolor{block title}{fg=xethrublack} % adjust title color to poppy
+\setbeamercolor{block item}{fg=xethrublack}
+\setbeamercolor{itemize item}{fg=xethrublack} % adjusts the bullet color
+
+% frame title styling
+\setbeamertemplate{frametitle}{\vspace{1.5em} \color{xethrublack} \insertframetitle}
+\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
+
+% frame content styling
+\setbeamersize{text margin left=1.5em,text margin right=3em}
+
+%define first bullet symbol
+\usesubitemizeitemtemplate{%
+    \tiny\raise1.5pt\hbox{\color{xethrusecondary}$\circ$}%
+}
+
+%define second bullet symbol
+\usesubsubitemizeitemtemplate{%
+    \tiny\raise1.5pt\hbox{\color{xethrusecondary}$\blacktriangleright$}%
+}
+
+\ifbeamer@secheader\else\setbeamertemplate{headline}[default]\fi
+
+\mode
+<all>

@@ -7,7 +7,7 @@
 %
 % Information about who sent the letter
 \dept{\Organisation}
-\address{\Address} 
+\address{\Address}
 \telephone{\Telephone}
 %\fax{+44 (0)20 7584 8120}
 \email{\Email}
@@ -15,7 +15,7 @@
 \web{\Website}
 \nametitle{\Salutation}
 \author{\FirstName~\LastName}
-\postnoms{\Creditation}
+\postnoms{\Certification}
 \jobtitle{\JobTitle}
 %\signature{signature.png}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % %

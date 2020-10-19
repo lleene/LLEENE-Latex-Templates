@@ -1,17 +1,16 @@
 %% Default Author details used by scripts
 %% Several fields below can accommodate URL links
 \makeatletter
-\newcommand{\Salutation}{Mr.}
-\newcommand{\FirstName}{John}
-\newcommand{\LastName}{Dough}
-\newcommand{\Certification}{MCA}
-\newcommand{\Email}{j.dough@baker.br}
-\newcommand{\JobTitle}{Technical Oven Assistant}
-\newcommand{\Group}{Main Baking staff for Bread}
-\newcommand{\Organisation}{A Baking Company for Bread, Anytown, USA}
-\newcommand{\Address}{123 Main St, Anytown, 90210 USA}
-\newcommand{\Telephone}{+88 (0)8888 888888}
-\newcommand{\LinkedIn}{john-dough}
-\newcommand{\Website}{www.baker.br/oven-corner}
-\newcommand{\Creditation}{MCA}
+\newcommand{\Salutation}{Dr.}
+\newcommand{\FirstName}{Lieuwe}
+\newcommand{\LastName}{Leene}
+\newcommand{\Certification}{PhD MSc}
+\newcommand{\Email}{lieuwe.leene@novelda.com}
+\newcommand{\JobTitle}{Senior IC Design Engineer}
+\newcommand{\Group}{Xethru Engineering Division}
+\newcommand{\Organisation}{Novelda}
+\newcommand{\Address}{12F Helgesens Gate, Oslo, 0553 Norway}
+\newcommand{\Telephone}{+44 (0)7544 757250}
+\newcommand{\LinkedIn}{lieuwe-leene}
+\newcommand{\Website}{www.xethru.com}
 \makeatother
