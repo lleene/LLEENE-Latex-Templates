@@ -1,4 +1,4 @@
-texlive-xetex
+xelatex
 latexmk
 texlive-amsmath
 texlive-beamer
