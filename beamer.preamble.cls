@@ -172,4 +172,24 @@
 \fi
 }
 
+\newcommand{\insertbib}[1]{
+\begin{frame}[allowframebreaks]
+\frametitle{References}
+\footnotesize
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,IEEEbst,#1}
+\end{frame}
+}
+
+%% Put Author details here
+\newcommand{\inserttitlepage}[0]{
+\disablefooter
+\institute{\Group \\
+\Organisation \\
+\href{\Website}{\Website}}%
+\maketitle
+\inserttoc
+\enablefooter{\maintitle}
+}
+
 \input{default_symbols.cls}
