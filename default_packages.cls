@@ -1,3 +1,6 @@
+% Latex Default Package List for Standardised Composition
+% Modified by Lieuwe Leene, June 2019
+
 \usepackage{latexsym}  % Optional extra symbols from LaTeX2.09
 \usepackage{amsmath,amssymb}   % Math formatting & symbols
 %Specific for AMSMATH - (re)allows page breaks within aligned equations as IEEEtran normally does.

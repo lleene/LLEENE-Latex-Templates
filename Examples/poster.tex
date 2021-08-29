@@ -10,11 +10,12 @@
 \newcommand{\mainsubject}{Example Poster}
 \newcommand{\mainkeywords}{Keywords}
 \makeatother
- 
+
 %uncomment to disable hyperref package
 %\newcommand{\nolinks}{}
 
-\documentclass{enginiposter}
+%\documentclass{enginiposter}
+\documentclass{forteposter}
 \input{poster.preamble.cls}
 \begin{document}
 \bstctlcite{IEEEexample:BSTcontrol}
@@ -42,18 +43,21 @@
   \includegraphics[width=8cm]{Style/phone.pdf}
 }}
 
+\bigskip
+\bigskip
+
 \clearbackground
 
-\doubleframe{\labelitemi header1}{%
+\doubleframe{header1}{%
   \lipsum[3]~\cite{refernce1}
 
-\mdfsubtitle{ \labelitemi header2} \color{black}
+\mdfsubtitle{header2} \color{black}
   \lipsum[4]~\cite{refernce2}
 
-}{\labelitemi header3}{%
+}{header3}{%
   \lipsum[5]~\cite{refernce3}
 
-\mdfsubtitle{ \labelitemi header4} \color{black}
+\mdfsubtitle{header4} \color{black}
     \lipsum[6]~\cite{refernce4}
 
 }

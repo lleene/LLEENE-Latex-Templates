@@ -7,9 +7,10 @@
 
 % Define logo
 \RequirePackage{graphicx}
-\newcommand{\placelogocmd}{\includegraphics{\placelogo}}
 \ifx\placelogo\undefined
-\renewcommand{\placelogocmd}{}
+\newcommand{\placelogocmd}{ }
+\else
+\newcommand{\placelogocmd}{\includegraphics{\placelogo}}
 \fi
 
 % Define colors

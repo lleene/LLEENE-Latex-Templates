@@ -1,3 +1,4 @@
+% Latex Default Symbol List for Standardised Composition
 % Modified by Lieuwe Leene, June 2019
 
 % Round down Math Mode

@@ -120,13 +120,18 @@ Last Updated on \today } % Last Updated text
 %----------------------------------------------------------------------------------------
 %	FOOT NOTE COMMAND
 %----------------------------------------------------------------------------------------
+\ifx\noheader\undefined
+  \pagestyle{fancy}
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \lfoot{\Salutation~\FirstName~\LastName --- \mainsubject}
+  \rfoot{\hfill Page: \thepage{} | \pageref*{LastPage}}
+  \fancyheadoffset[loh,reh]{20mm}
+\else
+  \pagestyle{empty}
+  \cfoot{}
+\fi
 
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-\lfoot{\Salutation~\FirstName~\LastName --- \mainsubject}
-\rfoot{\hfill Page: \thepage{} | \pageref*{LastPage}}
-\fancyheadoffset[loh,reh]{20mm}
 
 \newcommand{\tailsection}{}
 

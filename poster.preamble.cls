@@ -23,7 +23,7 @@
 }
 
 \newlength{\dpagewidth}
-\setlength{\dpagewidth}{0.46\paperwidth}
+\setlength{\dpagewidth}{0.46\paperwidth} 
 \newlength{\tpagewidth}
 \setlength{\tpagewidth}{0.28\paperwidth}
 
