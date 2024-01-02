@@ -31,7 +31,7 @@
 
 \providecommand{\fontscale}{1} % load default if not set
 \setmainfont
- [Path = ../Fonts/IBM-Plex-Sans/,
+ [Path = ../Latex/Fonts/IBM-Plex-Sans/,
    Scale=\fontscale,
    UprightFont = *-Regular,
    ItalicFont = *-Italic,
@@ -58,7 +58,7 @@
 \setlength{\TPHorizModule}{0.01\paperwidth} % Sets the units for the horizontal position used in the \begin{textblock} argument
 \setlength{\TPVertModule}{0.01\paperwidth} % Sets the units for the vertical position used in the \begin{textblock} argument
 \newcommand{\lastupdated}{ % Create a new command for printing the Last Updated text
-\begin{textblock}{23}(75,13.5) % The position of the Last Updated text on the page
+\begin{textblock}{23}(70,10.5) % The position of the Last Updated text on the page
 \flushleft{
 \color{date}\fontseries{l}\selectfont \small \selectfont % Text styling of the text
 Last Updated on \today } % Last Updated text
@@ -105,7 +105,7 @@ Last Updated on \today } % Last Updated text
 {\fontseries{m}\selectfont \LastName} % Last name font
 \vspace{0.45cm}} \\[5pt] % Whitespace between the name and contact information
 
-\begin{textblock}{23}(75,4)
+\begin{textblock}{23}(70,3)
 \vline
 \flushleft{\color{headings}%
 {\fontseries{l}\selectfont Address:} \Address \\

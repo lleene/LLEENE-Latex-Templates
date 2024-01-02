@@ -1,15 +1,13 @@
 
-% Modified Beamer Style sheet for NGNI publications
-% Last edited by: Lieuwe B. Leene 2017 August
-% Modified by Lieuwe Leene, June 2019
+% Modified Beamer Style sheet for internal presentations
+% Created by: Lieuwe B. Leene 2017 August
+% Modified by Lieuwe Leene, Jan. 2020
 
-%% Before using the beamer preamble which prepares a standardised NGNI format.
+%% Before using the beamer preamble which prepares a standardised XETHRU format.
 %% There are a few comments regarding the file structure
 %% beamer.preamble.tex will prepares latex packages/commands
-%% beamerthemengni.sty formats the general style of the template fonts & colors
-%% beamerouterthemengni.tsy formats slide specific things such as title & Footer
-
-\usefonttheme{professionalfonts}
+%% beamerthemexethru.sty formats the general style of the template fonts & colors
+%% beamerouterthemexethru.tsy formats slide specific things such as title & Footer
 
 \input{personal_details.cls}  %% Load author details
 
@@ -39,10 +37,44 @@
   \@esphack}
 \makeatother
 
-\definecolor{ngniblue}{RGB}{34,57,106}
-\definecolor{ngnired}{RGB}{218,30,37}
-\definecolor{ngniwhite}{RGB}{240,240,255}
-\definecolor{ngniblack}{RGB}{0,0,30}
+% % % % % % % % % % % % % % %
+% BEAMER - font selection   %
+% % % % % % % % % % % % % % %
+
+\usepackage{ifxetex}
+\ifxetex
+\usepackage{fontspec} % Required for specifying custom fonts in XeLaTeX
+\providecommand{\fontscale}{1} % load default if not set
+\setmainfont
+ [Path = ../Fonts/IBM-Plex-Sans/,
+   Scale=\fontscale,
+   UprightFont = *-Regular,
+   ItalicFont = *-Italic,
+   BoldFont = *-Bold,
+   BoldItalicFont = *-BoldItalic,
+   FontFace = {t}{n}{*-Thin},
+   FontFace = {t}{it}{*-ThinItalic},
+   FontFace = {l}{n}{*-Light},
+   FontFace = {l}{it}{*-LightItalic},
+   FontFace = {sb}{n}{*-SemiBold},
+   FontFace = {sb}{it}{*-SemiBoldItalic},
+   FontFace = {m}{n}{*-Medium},
+   FontFace = {m}{it}{*-MediumItalic},
+   FontFace = {b}{n}{*-Bold},
+   FontFace = {b}{it}{*-BoldItalic},
+   Ligatures=TeX]
+  {IBMPlexSans}
+\renewcommand{\baselinestretch}{\fontscale}
+\setbeamerfont{frametitle}{family=\fontspec{IBMPlexSans}}
+\setbeamerfont{framesubtitle}{family=\fontspec{IBMPlexSans}}
+\setbeamerfont{title}{family=\fontspec{IBMPlexSans}}
+\setbeamerfont{caption}{family=\fontspec{IBMPlexSans}}
+\setbeamerfont{author}{family=\fontspec{IBMPlexSans}}
+\setbeamerfont{institute}{family=\fontspec{IBMPlexSans}}
+\setbeamerfont{date}{family=\fontspec{IBMPlexSans}}
+\else
+\usefonttheme{professionalfonts}
+\fi
 
 % % % % % % % % % % % % % % % % % % % %
 % BEAMER - configuration / settings   %
@@ -53,10 +85,12 @@
 
 \mode<presentation>
 {
-	\usetheme{ngni}
+	\usetheme{xethru}
 	\setbeamercovered{transparent}
 	\setbeamertemplate{items}[circle]
 }
+
+\newcommand{\highlight}[1]{\textcolor{blue}{#1}}
 
 % % % % % % % % % % % % % % % % % % % %
 % DOCUMENT - configuration / commands %
@@ -155,6 +189,24 @@
 \end{minipage}
 }
 
+\newcommand{\sectionslide}[1]{
+\section{#1}
+\begin{frame}
+\centering
+\usebeamerfont{title}\secname\par
+\end{frame}
+}
+
+\newcommand{\subsectionslide}[1]{
+\subsection{#1}
+\begin{frame}
+\centering
+\usebeamerfont{subtitle} \secname \par
+\bigskip
+\usebeamerfont{title} \subsecname\par
+\end{frame}
+}
+
 \newcommand{\inserttoc}[0]{
 \ifx\nosectiontoc\undefined
 \else
@@ -166,7 +218,7 @@
 
 \newcommand{\linkwebsite}{
 \ifx\nolinks\undefined
-\href{\Website}{\Website}
+\href{https://\Website}{\Website}
 \else
 \Website
 \fi

@@ -42,8 +42,6 @@
 %% List of personally preferred symbol definitions
 %% Taken and edited from various online code snippets
 
-\usepackage{upgreek}
-
 \newcommand{\ipc}{{\sf ipc}}
 \newcommand{\Prob}{\bbbp}
 \newcommand{\Real}{\bbbr}
@@ -68,32 +66,32 @@
 \newcommand{\UUprime}{{\bf U'}}
 \newcommand{\zzero}{{\bf 0}}
 \newcommand{\ppi}{\mbox{\boldmath $\pi$}}
-\newcommand{\rpi}{$\uppi$}
+\newcommand{\rpi}{$\pi$}
 \newcommand{\dDelta}{\mbox{\boldmath $\Delta$}}
-\newcommand{\rDelta}{$\Updelta$}
-\newcommand{\rSigma}{$\Upsigma$}
-\newcommand{\rSD}{$\Upsigma\Updelta$}
-\newcommand{\rDS}{$\Updelta\Upsigma$}
+\newcommand{\rDelta}{$\Delta$}
+\newcommand{\rSigma}{$\Sigma$}
+\newcommand{\rSD}{$\Sigma\Delta$}
+\newcommand{\rDS}{$\Delta\Sigma$}
 \newcommand{\aalph}{\mbox{\boldmath $\alpha$}}
-\newcommand{\ralpha}{$\upalpha$}
+\newcommand{\ralpha}{$\alpha$}
 \newcommand{\pphi}{\mbox{\boldmath $\phi$}}
-\newcommand{\rphi}{$\upphi$}
+\newcommand{\rphi}{$\phi$}
 \newcommand{\bb}{{\bf b}}
 \newcommand{\ee}{{\bf e}}
 \newcommand{\mmu}{\mbox{\boldmath $\mu$}}
-\newcommand{\rmu}{$\upmu$}
+\newcommand{\rmu}{$\mu$}
 \newcommand{\mbeta}{\mbox{\boldmath $\beta$}}
-\newcommand{\rbeta}{$\upbeta$}
+\newcommand{\rbeta}{$\beta$}
 \newcommand{\meta}{\mbox{\boldmath $\eta$}}
-\newcommand{\reta}{$\upeta$}
-\newcommand{\rsigma}{$\upsigma$}
-\newcommand{\rtau}{$\uptau$}
+\newcommand{\reta}{$\eta$}
+\newcommand{\rsigma}{$\sigma$}
+\newcommand{\rtau}{$\tau$}
 \newcommand{\vv}{{\bf v}}
 \newcommand{\xx}{{\bf x}}
 \newcommand{\yy}{{\bf y}}
 \newcommand{\zz}{{\bf z}}
 \newcommand{\oomeg}{\mbox{\boldmath $\omega$ }}
-\newcommand{\rOmeg}{$\Upomega$}
+\newcommand{\rOmeg}{$\Omega$}
 \newcommand{\res}{{\bf res}}
 \newcommand{\cchi}{{\mbox{\raisebox{.4ex}{$\chi$}}}}
 %\newcommand{\cchi}{{\cal X}}

@@ -1,0 +1,79 @@
+% Modified Beamer Style sheet for Xethru publications
+% Created by: Lieuwe B. Leene 2020 Jan
+
+\mode<presentation>
+\newcommand{\FrontLogoA}{Style/xethru_logo_blue.pdf}
+\newcommand{\FootLogoA}{Style/xethru_logo_white.pdf}
+%\newcommand{\BaseBackground}{Style/KM1801VM2_I.png}
+
+\newlength{\marginlength}%
+\setlength{\marginlength}{0.5cm}%
+
+%% This formats the title page
+\setbeamercolor{basic}{bg=white,fg=white}
+\defbeamertemplate*{title page}{xethrutheme}{
+  \begin{beamercolorbox}[wd=\paperwidth]{basic}
+
+    %% Insert Background Here
+
+    \hspace{\marginlength} \parbox[c]{\dimexpr (\paperwidth-2\marginlength) \relax}{ %
+		\includegraphics[height=0.4\paperheight, trim={0 0 0 -5cm}]{\FrontLogoA} %
+    }
+    \vspace{1.5\marginlength}  \\
+    \hspace{\marginlength} \parbox[c]{\textwidth}{%
+      \begin{flushleft}
+        \usebeamercolor[black]{title}
+        \usebeamerfont{title}\inserttitle\par
+        \usebeamerfont{subtitle}\insertsubtitle\par
+        \bigskip
+        \usebeamerfont{author}\insertauthor\par
+        \bigskip
+        \usebeamerfont{institute}\insertinstitute\par
+      \end{flushleft}}
+
+  \end{beamercolorbox}
+  \vskip 0pt%
+}
+
+
+%% This formats the the footer on every page
+\defbeamertemplate*{footline}{xethrutheme}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=5ex,dp=2.5ex]{footnote}%
+  \usebeamerfont{footnote}
+  \hspace{5mm} \today
+  \hfill
+  \insertsubtitle
+  \hfill
+  \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \inserttitlegraphic \hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip 0pt%
+}
+
+\ifx\nosectiontoc\undefined
+\AtBeginSection[]
+{
+\disablefooter
+\begin{frame}{Outline}
+	\tableofcontents[currentsection]
+\end{frame}
+\enablefooter{\inserttitle}
+}
+\fi
+
+\newcommand{\enablefooter}[1]{
+%% Put the Footer Subtitle Here
+\subtitle{#1}
+%% This shows some Footer graphics
+\titlegraphic{\includegraphics[height=4ex,trim={0 5cm 0 -4cm}]{\FootLogoA}}
+}
+
+\newcommand{\disablefooter}[0]{
+	\subtitle{}
+	\titlegraphic{}
+}
+
+\mode
+<all>
