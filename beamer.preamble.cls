@@ -37,15 +37,6 @@
   \@esphack}
 \makeatother
 
-%\definecolor{ngniblue}{RGB}{34,57,106}
-%\definecolor{ngnired}{RGB}{218,30,37}
-%\definecolor{ngniwhite}{RGB}{240,240,255}
-%\definecolor{ngniblack}{RGB}{0,0,30}
-
-%\definecolor{xethrublack}{RGB}{20,0,20}
-%\definecolor{xethruwhite}{RGB}{255,240,255}
-%\definecolor{xethrublue}{RGB}{47,26,69}
-
 % % % % % % % % % % % % % % %
 % BEAMER - font selection   %
 % % % % % % % % % % % % % % %
@@ -55,7 +46,7 @@
 \usepackage{fontspec} % Required for specifying custom fonts in XeLaTeX
 \providecommand{\fontscale}{1} % load default if not set
 \setmainfont
- [Path = ../../Fonts/IBM-Plex-Sans/,
+ [Path = ../Fonts/IBM-Plex-Sans/,
    Scale=\fontscale,
    UprightFont = *-Regular,
    ItalicFont = *-Italic,
