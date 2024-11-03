@@ -58,7 +58,7 @@
 \setlength{\TPHorizModule}{0.01\paperwidth} % Sets the units for the horizontal position used in the \begin{textblock} argument
 \setlength{\TPVertModule}{0.01\paperwidth} % Sets the units for the vertical position used in the \begin{textblock} argument
 \newcommand{\lastupdated}{ % Create a new command for printing the Last Updated text
-\begin{textblock}{23}(70,10.5) % The position of the Last Updated text on the page
+\begin{textblock}{23}(70,11.5) % The position of the Last Updated text on the page
 \flushleft{
 \color{date}\fontseries{l}\selectfont \small \selectfont % Text styling of the text
 Last Updated on \today } % Last Updated text
@@ -105,7 +105,7 @@ Last Updated on \today } % Last Updated text
 {\fontseries{m}\selectfont \LastName} % Last name font
 \vspace{0.45cm}} \\[5pt] % Whitespace between the name and contact information
 
-\begin{textblock}{23}(70,3)
+\begin{textblock}{23}(70,4)
 \vline
 \flushleft{\color{headings}%
 {\fontseries{l}\selectfont Address:} \Address \\
@@ -151,7 +151,7 @@ Last Updated on \today } % Last Updated text
 %----------------------------------------------------------------------------------------
 
 \newenvironment{tightitemize} % Defines the tightitemize environment which modifies the itemize environment to be more compact
-{\vspace{-\topsep} \begin{itemize} \itemsep1pt \parskip0pt \parsep0pt}
+{\vspace{-\topsep} \begin{itemize} \itemsep4pt \parskip1pt \parsep1pt}
 {\end{itemize} \vspace{-\topsep}}
 
 %----------------------------------------------------------------------------------------
