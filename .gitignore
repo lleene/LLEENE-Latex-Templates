@@ -2,6 +2,10 @@
 Examples/tex_output
 Documents/
 
+## Generated font files
+*.afm
+*.pfa
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
