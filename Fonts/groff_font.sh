@@ -15,3 +15,11 @@ for afm_file in ./*afm; do
 	if [[ "${afm_file,,}" == *"bolditalic"* ]] ; then FONT_TYPE="BI" ; fi
 	afmtodit -e $ENC_FILE $afm_file $MAP_FILE "${FONT_FAMILY}${FONT_TYPE}"
 done
+
+# Place the generated font file in your .local directory 
+# and set GROFF_FONT_PATH="$HOME/.local/share/groff/site-font" during compile
+# 
+# $HOME/.local/share/groff/site-font/devpdf:
+# IBM-Plex-SansB  IBM-Plex-SansBI  IBM-Plex-SansI  IBM-Plex-SansR
+# $HOME/.local/share/groff/site-font/devps:
+# IBM-Plex-SansB  IBM-Plex-SansBI  IBM-Plex-SansI  IBM-Plex-SansR
